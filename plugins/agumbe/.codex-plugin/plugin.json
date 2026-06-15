@@ -1,0 +1,42 @@
+{
+  "name": "agumbe",
+  "version": "0.1.0",
+  "description": "Build, deploy, and operate Agumbe full-stack applications from Codex.",
+  "author": {
+    "name": "Agumbe AI",
+    "url": "https://agumbe.dev"
+  },
+  "homepage": "https://agumbe.dev",
+  "repository": "https://github.com/agumbe-ai/codex-plugin",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agumbe",
+    "full-stack",
+    "deployment",
+    "kubernetes",
+    "gitops"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agumbe",
+    "shortDescription": "Build and deploy Agumbe full-stack apps from Codex",
+    "longDescription": "Provision Agumbe workspaces, deploy full-stack applications, inspect rollout status, create environments, and troubleshoot workloads without leaving Codex.",
+    "developerName": "Agumbe AI",
+    "category": "Engineering",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://agumbe.dev",
+    "defaultPrompt": [
+      "Create and deploy a full-stack app on Agumbe.",
+      "Deploy this project to my Agumbe workspace.",
+      "Check my Agumbe deployment and investigate failures."
+    ],
+    "brandColor": "#FF6B3D",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
+  },
+  "mcpServers": "./.mcp.json"
+}
