@@ -1,6 +1,6 @@
 {
   "name": "agumbe",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Build, deploy, and operate Agumbe full-stack applications from Codex.",
   "author": {
     "name": "Agumbe AI",

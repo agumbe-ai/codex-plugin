@@ -23,3 +23,16 @@ description: Provision a new Agumbe full-stack application workspace. Use when t
 
 Never request Kubernetes credentials or cloud-provider credentials from the
 user.
+
+If `agumbe_create_workspace` is unavailable, stop. Do not scaffold or create
+the application locally and do not substitute another deployment provider.
+Explain that the Agumbe MCP server did not initialize, then instruct the user
+to run:
+
+```bash
+codex mcp logout agumbe
+codex mcp login agumbe --scopes workspaces:read,workspaces:write
+```
+
+After authorization, the user must start a fresh Codex process or thread before
+retrying.

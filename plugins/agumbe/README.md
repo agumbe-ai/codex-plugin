@@ -19,12 +19,25 @@ continues to use its explicit blueprint review and approval flow.
 Authenticate through the MCP OAuth flow:
 
 ```bash
+codex mcp logout agumbe
 codex mcp login agumbe --scopes workspaces:read,workspaces:write
 ```
+
+Start a fresh Codex process or thread after authorization. Existing sessions do
+not dynamically acquire MCP tools that failed to initialize during startup.
 
 Never paste an Agumbe session cookie or application token into this plugin.
 Codex securely stores and refreshes the OAuth credentials used by the remote
 MCP server.
+
+If an Agumbe skill loads but its MCP tool is unavailable, do not let Codex
+create a local substitute application. Reauthorize and restart Codex:
+
+```bash
+codex mcp logout agumbe
+codex mcp login agumbe --scopes workspaces:read,workspaces:write
+codex mcp get agumbe --json
+```
 
 ## Included Skills
 

@@ -14,8 +14,13 @@ If the MCP tool reports that authentication is required, instruct the user to
 run:
 
 ```bash
+codex mcp logout agumbe
 codex mcp login agumbe --scopes workspaces:read,workspaces:write
 ```
+
+After authorization, instruct the user to start a fresh Codex process or
+thread. Do not attempt to list workspaces through shell commands, local files,
+or a substitute service when the Agumbe MCP tool is unavailable.
 
 Never execute a local Agumbe MCP server, read `~/.config/agumbe/credentials.json`,
 request a session cookie, or suggest `plugins/agumbe/scripts/configure-auth.mjs`.

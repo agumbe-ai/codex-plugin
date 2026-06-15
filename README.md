@@ -19,6 +19,22 @@ codex plugin add agumbe@agumbe
 Start a fresh Codex thread after installation. Codex will prompt you to
 authorize Agumbe when a tool first needs access.
 
+For a deterministic first-time setup:
+
+```bash
+codex mcp logout agumbe
+codex mcp login agumbe --scopes workspaces:read,workspaces:write
+codex mcp get agumbe --json
+```
+
+After authorization, exit the current Codex process and start a fresh one.
+Plugin-provided MCP tools are loaded when a Codex session starts. If OAuth
+fails during startup, the Agumbe skills remain visible but the Agumbe tools are
+not exposed to that session.
+
+Agumbe skills must never replace a failed Agumbe MCP operation by scaffolding a
+local application.
+
 ## Try It
 
 ```text
